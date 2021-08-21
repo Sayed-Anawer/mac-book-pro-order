@@ -29,14 +29,16 @@ function selectingChoice(choice, price) {
 
 // In this function checking input if it is stevekaku or not.
 function checkInputValue() {
+  let getTheTotalprice = (document.getElementById("total-price").innerText);
   let totalFinal = document.getElementById("final-total");
-  let totalFinalValue = parseInt(totalFinal.innerText);
   let cuponInput = document.getElementById("cupon-input");
+
+  let totalFinalOfferValue =
+    parseInt(getTheTotalprice) - parseInt(getTheTotalprice) * (20 / 100);
   if (cuponInput.value === "stevekaku") {
-    totalFinal.innerText =
-      parseInt(totalFinalValue) - parseInt(totalFinalValue) * (20 / 100);
+    totalFinal.innerText = totalFinalOfferValue;
     cuponInput.value = "";
-  } 
+  }
 }
 // By clicking this apply button it will check and give 20% off and upadate the final-price only.
 document.getElementById("apply-btn").addEventListener("click", function () {
