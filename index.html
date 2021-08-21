@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <main class="container d-flex mt-5 mb-4">
+
+        <!-- Image section start -->
+        <section>
+            <img class="img-fluid w-75" src="mac.png" alt="">
+        </section>
+        <!-- Image section End -->
+
+        <!-- Specificaiton section start -->
+        <section class="w-75">
+
+            <h1>Customize your Blue 24-inch iMac with Apple M1 chip.</h1>
+            <p>Apple M1 chip with 8-core CPU with 4 perfomrance cores and 4 efficiency <br> cores, 7-cores GPU,and
+                16-core Neural Engine GB unified memory 256GB <br> SSD storage Two Thunderbolt / USB 4 ports Magic Mouse
+                Magic keyboard - <br> US English
+            </p>
+
+            <!-- Choose Extra option buttons Start -->
+            <div class="extra-choice">
+                <div class="memory-choice my-5">
+                    <h5>Memory</h5>
+                    <button type="button" class="btn btn-outline-dark" onclick="selectingChoice('memory',0)">8GB unified
+                        memory</button>
+                    <button type="button" class="btn btn-outline-dark" onclick="selectingChoice('memory',180)">16GB
+                        unified
+                        memory</button>
+                </div>
+                <div class="storage-choice my-5">
+                    <h5>Storage</h5>
+                    <button type="button" class="btn btn-outline-dark" id="storage-1"
+                        onclick="selectingChoice('storage',0)">256Gb SSD
+                        storage</button>
+                    <button type="button" class="btn btn-outline-dark" onclick="selectingChoice('storage',100)">512Gb
+                        SSD
+                        storage</button>
+                    <button type="button" class="btn btn-outline-dark" onclick="selectingChoice('storage',180)">1TB SSD
+                        storage</button>
+                </div>
+                <div class="delivery-choice my-5">
+                    <h5>Choose your delivery option</h5>
+                    <button type="button" class="btn btn-outline-dark" onclick="selectingChoice('delivery',0)">Friday,
+                        Aug 25 Free
+                        Prime Delivery</button>
+                    <button type="button" class="btn btn-outline-dark" onclick="selectingChoice('delivery',20)">Friday,
+                        Aug 21
+                        Delivery charge $20</button>
+                </div>
+                <!-- Choose Extra option buttons End -->
+
+
+                <!-- All kind of Pricing values Start -->
+
+                <div class="pricing-section w-50">
+                    <div class="best-price d-flex  my-1 justify-content-between">
+                        <p class="fw-bold fs-5">Best Price</p>
+                        <p class="fw-bold fs-5">$<span id="best-price">1299</span></p>
+                    </div>
+                    <hr>
+                    <div class="best-price d-flex justify-content-between my-1">
+                        <p class="fw-bold fs-5">Extra Memory Cost</p>
+                        <p class="fw-bold fs-5">$<span id="memory-cost">0</span></p>
+                    </div>
+                    <hr class="border border-dark border-1">
+                    <div class="best-price d-flex justify-content-between my-1">
+                        <p class="fw-bold fs-5">Extra Storage Cost</p>
+                        <p class="fw-bold fs-5">$<span id="storage-cost">0</span></p>
+                    </div>
+                    <hr>
+                    <div class="best-price d-flex justify-content-between my-1">
+                        <p class="fw-bold fs-5">Delivery charge</p>
+                        <p class="fw-bold fs-5">$<span id="delivery-cost">0</span></p>
+                    </div>
+                    <hr class="border border-dark border-2">
+                    <div class="best-price d-flex justify-content-between my-1">
+                        <p class="fw-bold fs-5">Total Price</p>
+                        <p class="fw-bold fs-5">$<span id="total-price">1299</span></p>
+                    </div>
+                    <hr class="border border-dark border-1">
+
+                    <!-- All kind of Pricing values End-->
+
+                    <!-- Promo code Input  start -->
+                    <div class="promo-code mb-4">
+                        <p class="fs-5 fw-bolder">Add Pomo code</p>
+                        <div class="input-section d-flex">
+                            <input type="text" class="w-100" id="cupon-input">
+                            <button class="btn btn-danger " type="button" id="apply-btn">Apply</button>
+                        </div>
+                    </div>
+                    <!-- Promo code Input  End -->
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- Specificaiton section End -->
+    </main>
+    <hr class="border border-dark border-1 container">
+
+    <!-- Total Final count Section Start -->
+    <section class="container mb-5">
+        <h2 class="text-center">Total: $<span id="final-total">1299</span> </h2>
+    </section>
+    <!-- Total Final count Section End -->
+
+    <!-- Javascript file link -->
+    <script src="script.js"></script>
+</body>
+
+</html>
